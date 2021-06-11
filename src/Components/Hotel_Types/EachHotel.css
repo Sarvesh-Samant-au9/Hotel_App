@@ -1,0 +1,13 @@
+.heading__card:hover {
+  transform: skewY(3deg);
+  /* font-family: cursive; */
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.heading__card {
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
