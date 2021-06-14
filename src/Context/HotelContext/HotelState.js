@@ -9,6 +9,7 @@ import {
   OUR_SERVICES,
   RANDOM_HOTELS,
   SINGLE_HOTEL_DETAIL,
+  FILTER_ROOMS,
 } from "../types";
 
 const HotelState = (props) => {
@@ -107,6 +108,20 @@ const HotelState = (props) => {
     }
   };
 
+  const filteredDataRoomType = async (id, inputVal) => {
+    try {
+      const { data } = await axios.get(
+        `https://developerfunnel.herokuapp.com/hotellist/${id}?roomtype=${inputVal}`
+      );
+      dispatch({
+        type: FILTER_ROOMS,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <HotelContext.Provider
       value={{
@@ -116,12 +131,14 @@ const HotelState = (props) => {
         particularHotel: state.particularHotel,
         allCities: state.allCities,
         allHotelsCity: state.allHotelsCity,
+
         fetchTypes,
         fetchHotelLists,
         fetchRecommended,
         fetchSingleDetail,
         fetchAllCities,
         fetchAllHotelsOnCityChange,
+        filteredDataRoomType,
       }}
     >
       {props.children}

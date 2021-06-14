@@ -3,9 +3,9 @@ import "./Recommendation.css";
 import { Link } from "react-router-dom";
 const EachRecommend = ({ recommendation }) => {
   const { name, city_name, thumb, cost, _id } = recommendation;
-  console.log(recommendation);
+  // console.log(recommendation);
   return (
-    <div className="col-10 mx-auto col-md-3">
+    <div className="col-6 mx-auto col-md-3">
       <div className="card text-white bg-dark mb-3">
         <img
           className="card-img-top"
@@ -19,10 +19,10 @@ const EachRecommend = ({ recommendation }) => {
           </Link>
         </div>
         <div className="card-body city__cost">
-          <h6>{city_name}</h6>
-          <h6>
+          <p>{city_name}</p>
+          <p>
             <i className="fas fa-rupee-sign"></i> {cost} /day
-          </h6>
+          </p>
         </div>
       </div>
     </div>

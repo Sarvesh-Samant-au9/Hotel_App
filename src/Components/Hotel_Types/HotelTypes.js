@@ -2,7 +2,7 @@ import React from "react";
 import EachHotelType from "./EachHotelType";
 
 const HotelTypes = ({ services }) => {
-  console.log(services);
+  // console.log(services);
   return (
     <div>
       <div className="row">

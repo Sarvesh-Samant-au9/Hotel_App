@@ -6,6 +6,7 @@ import {
   SINGLE_HOTEL_DETAIL,
   ALL_CITIES,
   ALL_HOTELS_CITY,
+  FILTER_ROOMS,
 } from "../types";
 
 export default (state, action) => {
@@ -43,7 +44,12 @@ export default (state, action) => {
     case ALL_HOTELS_CITY:
       return {
         ...state,
-        allHotelsCity:payload
+        allHotelsCity: payload,
+      };
+    case FILTER_ROOMS:
+      return {
+        ...state,
+        listedHotels: payload,
       };
     default:
       return state;

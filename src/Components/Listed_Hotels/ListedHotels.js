@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import HotelContext from "../../Context/HotelContext/HotelContext";
 import Loading from "../../Layout/Loading/Loading";
 import EachListed from "./EachListed";
-
+import FormList from "./FormList";
 import Recommended from "../Recommend/Recommend";
 
 const ListedHotels = (props) => {
@@ -11,7 +11,7 @@ const ListedHotels = (props) => {
 
   const { fetchHotelLists, listedHotels } = hotelContext;
   // console.log(fetchHotelLists);
-  console.log(listedHotels);
+  // console.log(listedHotels);
   useEffect(() => {
     fetchHotelLists(props.match.params.id);
 
@@ -21,8 +21,7 @@ const ListedHotels = (props) => {
   return listedHotels ? (
     <div className="mt-4">
       <div className="row">
-        <div className="col-12 col-md-3 mx-auto">Filter</div>
-        <div className="col-12 col-md-9">
+        <div className="col-10 col-md-10 mx-auto">
           <h5 className="text-center">
             We Recommend You to Visit Below Hotels{" "}
             <i className="fas fa-hotel"></i>
@@ -30,7 +29,7 @@ const ListedHotels = (props) => {
           <Recommended />
         </div>
       </div>
-
+      <FormList historyId={props.match.params.id} />
       <h5>
         <span className="badge badge-warning text-dark">
           Search Results {listedHotels.length}
