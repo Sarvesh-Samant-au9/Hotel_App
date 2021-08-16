@@ -9,6 +9,8 @@ import ListedHotels from "./Components/Listed_Hotels/ListedHotels";
 import DetailInfo from "./Components/Detailed_Info/DetailInfo";
 import Footer from "./Layout/Footer/Footer";
 
+import NotFound from "./Pages/NotFound/NotFound";
+
 function App() {
   return (
     <div className="container-fluid">
@@ -21,6 +23,7 @@ function App() {
             <Route path="/about" component={About} exact />
             <Route path="/list/:id" component={ListedHotels} exact />
             <Route path="/details/:id" component={DetailInfo} exact />
+            <Route component={NotFound} exact />
           </Switch>
           <Footer />
         </BrowserRouter>

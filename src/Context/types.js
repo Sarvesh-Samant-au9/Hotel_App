@@ -1,6 +1,8 @@
 export const SET_ALERT = "SET_ALERT";
 export const CLEAR_ALERT = "CLEAR_ALERT";
 
+export const ALL_HOTELS = "ALL_HOTELS";
+
 // for Luxury, Holiday, ....
 export const OUR_SERVICES = "OUR_SERVICES";
 // for Particular Type Hotel

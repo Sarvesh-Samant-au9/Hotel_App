@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Footer = () => {
+  
   return (
-    <div>
-      <footer className="bg-dark text-center text-white mt-5 mb-1">
+    <>
+      <footer className="bg-dark text-center text-white mt-5 mb-1"
+      >
         <div className="container p-4">
           <section className="mb-4">
             <a
@@ -114,7 +116,7 @@ const Footer = () => {
           <p className="text-white">Universal Trips</p>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 

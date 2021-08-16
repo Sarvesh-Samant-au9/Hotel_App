@@ -33,12 +33,6 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/maps">
-              Globe
-            </Link>
-          </li>
-
           {/* <li className="nav-item"> */}
           {/* <Link className="nav-link" to=""> */}
           {/* Disabled */}
